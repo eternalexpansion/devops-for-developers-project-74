@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    image: node:20.12.2
+    working_dir: /root
+    volumes:
+      - ./app:/root
+    ports:
+      - "8080:8080"
+    command: make dev
+    user: "${UID:-1000}:${GID:-1000}"
+
