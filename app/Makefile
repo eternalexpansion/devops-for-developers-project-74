@@ -13,7 +13,7 @@ prepare-env:
 	cp -n .env.example .env
 
 start:
-	NODE_ENV=production npm run start
+	NODE_ENV=development npm start
 
 dev:
 	npx concurrently "make start-frontend" "make start-backend"
@@ -32,3 +32,6 @@ lint-fix:
 
 test:
 	NODE_ENV=test npm test -s
+
+start-minimal:
+	NODE_ENV=development node --inspect=0.0.0.0:9229 app/server.js
