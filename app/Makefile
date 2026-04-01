@@ -35,3 +35,6 @@ test:
 
 start-minimal:
 	NODE_ENV=development node --inspect=0.0.0.0:9229 app/server.js
+	
+ci:
+	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
