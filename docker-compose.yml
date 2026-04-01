@@ -4,11 +4,9 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
+    image: eternalexpansion/devops-for-developers-project-74
     working_dir: /app
-    volumes:
-      - ./app:/app
     command: make start
     ports:
       - "8080:8080"
-
