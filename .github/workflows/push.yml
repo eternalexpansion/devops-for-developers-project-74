@@ -48,4 +48,4 @@ jobs:
 
       - name: Run tests with Docker Compose
         run: |
-          make ci
+          docker compose -f docker-compose.yml run --rm app make test

@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile.production
     image: eternalexpansion/devops-for-developers-project-74
     working_dir: /app
-    command: make start
+    command: make test
     ports:
       - "8080:8080"
     environment:
